@@ -43,49 +43,27 @@ import cucumber.api.java.en.When
 
 
 
-class CriarUsuario {
-
-	@Given("Naveguei ate o site")
-	def navegarAteOSite() {
-		WebUI.openBrowser('')
-
-		WebUI.navigateToUrl('http://automacaocombatista.herokuapp.com/users/new')
-	}
+class InserirDados {
 
 
-
-	@When("Dados do usuario forem inseridos")
-	def inserirDadosUsuario() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
+	@When("(.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*) em branco")
+	def inserirDados(nome, sobrenome, email, endereco, universidade, profissao, genero, idade) {
 
 
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), nome)
 
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), sobrenome)
 
-	@And("Clicar no botão Criar")
-	def criarUsuario() {
-		WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
-	}
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), email)
 
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), endereco)
 
-	@Then("Tire o print com o nome (.*) na pasta (.*) para o fluxo (.*) e feche o navegador")
-	def takeScreenshotAndClose(String nomeArquivo, String pasta, String fluxo) {
-		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'(pasta, nomeArquivo, fluxo)
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), universidade)
 
-		WebUI.closeBrowser()
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), profissao)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), genero)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), idade)
 	}
 }

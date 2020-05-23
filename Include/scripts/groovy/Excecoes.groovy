@@ -45,223 +45,50 @@ import cucumber.api.java.en.When
 
 class Excecoes {
 
-	@When("(.*) invalido for inserido")
-	def inserirDadosUsuarioEmailInvalido(String email) {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
 
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	@When("Inserir email em branco")
-	def inserirDadosUsuarioEmaiEmBranco() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	@When("profissao em branco")
-	def inserirProfissaoEmBranco() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-
-	@When("idade em branco")
-	def inserirIdadeEmBranco() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	@When("nome em branco")
-	def inserirNomeEmBranco() {
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	@When("sobrenome em branco")
-	def inserirSobrenomeEmBranco() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	@When("endereco em branco")
-	def inserirEnderecoEmBranco() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	@When("universidade em branco")
-	def inserirUniversidadeEmBranco() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	@When("genero em branco")
-	def inserirGeneroEmBranco() {
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
-
-		//		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
-
-		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-	}
-
-	
 	@And("Alterar para Email em Branco")
 	def alterarEmailBranco(){
 		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), "")
 	}
-	
+
 	@And("Alterar para Nome em Branco")
 	def alterarNomeBranco(){
 		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), "")
 	}
-	
-	@Then("Valide emailInvalido, tire o print e feche o navegador")
-	def validarEmailinvalidoEFinalizar() {
+
+	@Then("Valide emailInvalido, tire o print salvando como (.*) na pasta (.*) para o fluxo (.*) e feche o navegador")
+	def validarEmailinvalidoEFinalizar(String nomeArquivo, String pasta, String fluxo) {
 
 		def text = WebUI.getText(findTestObject('Excecoes/li_Email translation missing pt-BRactiverec_a96981'))
 
 		WebUI.verifyMatch(text, 'Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid', true)
 
-		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaCriarUsuario', 'UsuarioCriado', 'FluxoBasico')
+		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'(pasta, nomeArquivo, fluxo)
 
 		WebUI.closeBrowser()
 	}
 
-	@Then("Valide emailEmBranco, tire o print e feche o navegador")
-	def validarEmailEmBrancoEFinalizar() {
+	@Then("Valide emailEmBranco, tire o print salvando como (.*) na pasta (.*) para o fluxo (.*) e feche o navegador")
+	def validarEmailEmBrancoEFinalizar(String nomeArquivo, String pasta, String fluxo) {
 
 		String text = WebUI.getText(findTestObject('Excecoes/h2_2 errors proibiu que este usurio fosse salvo'))
 
 		WebUI.verifyMatch(text, '2 errors proibiu que este usuário fosse salvo:', true)
 
-		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaCriarUsuario', 'UsuarioCriado', 'FluxoBasico')
+		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'(pasta, nomeArquivo, fluxo)
 
 		WebUI.closeBrowser()
-		
 	}
-	
 
-	@Then("Valide nomeEmBranco, tire o print e feche o navegador")
-	def validarNomeEmBrancoEFinalizar() {
+
+	@Then("Valide nomeEmBranco, tire o print salvando como (.*) na pasta (.*) para o fluxo (.*) e feche o navegador")
+	def validarNomeEmBrancoEFinalizar(String nomeArquivo, String pasta, String fluxo) {
 
 		String text = WebUI.getText(findTestObject('Excecoes/li_Name translation missing pt-BRactivereco_4aa27c'))
 
 		WebUI.verifyEqual(text, 'Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank')
 
-		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaCriarUsuario', 'UsuarioCriado', 'FluxoBasico')
+		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'(pasta, nomeArquivo, fluxo)
 
 		WebUI.closeBrowser()
 	}

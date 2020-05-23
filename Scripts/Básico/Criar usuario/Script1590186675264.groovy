@@ -40,5 +40,5 @@ WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), G
 
 WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
 
-CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'(gravacao, 'UsuarioCriado', 'FluxoBasico')
+CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'(gravacao, 'UsuarioCriado', 'Fluxo Basico')
 
