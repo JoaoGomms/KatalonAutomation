@@ -29,7 +29,7 @@
 # Fácil utilização da automação
 ### Para realizar todos os casos de teste acima é necessário fazer o seguinte processo: 
 
-**Após clonar o projeto para o seu Katalon clique em "Test Suites" no canto esquerdo da e clique duas vezes em "BDD SCENATIOS" tela para abrir a suite de testes**
+**Após clonar o projeto para o seu Katalon clique em "Test Suites" no canto esquerdo da e clique duas vezes em "BDD SCENARIOS" tela para abrir a suite de testes**
 ![teste](https://user-images.githubusercontent.com/35269074/82739807-38265180-9d19-11ea-8119-3dad0d2a30b6.png)
 
 
