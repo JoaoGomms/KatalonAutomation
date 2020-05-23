@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Editar Nome existente para em branco</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4d0f53cb-3b77-4421-8476-6e3c991d4f4c</testCaseGuid>
+</TestCaseEntity>

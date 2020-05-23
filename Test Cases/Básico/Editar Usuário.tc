@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Editar Usuário</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d1dbd6e5-d447-421c-bc56-4b4def932fbb</testCaseGuid>
+   <variable>
+      <defaultValue>'Alterando o nome'</defaultValue>
+      <description></description>
+      <id>44140e50-1aa1-4eda-b665-1545e6018ae6</id>
+      <masked>false</masked>
+      <name>nome</name>
+   </variable>
+   <variable>
+      <defaultValue>'Alterando o Sobrenome'</defaultValue>
+      <description></description>
+      <id>e430ba7a-3e4c-4e62-97fe-376af0fa3368</id>
+      <masked>false</masked>
+      <name>sobrenome</name>
+   </variable>
+   <variable>
+      <defaultValue>'EmailAlterado@alteracao.com'</defaultValue>
+      <description></description>
+      <id>3b67d6b4-a833-46e2-b64c-77daecbe5173</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+   <variable>
+      <defaultValue>'Av. alteração de endereço'</defaultValue>
+      <description></description>
+      <id>a37e85e2-aa39-494c-8fff-4748830cd523</id>
+      <masked>false</masked>
+      <name>endereco</name>
+   </variable>
+   <variable>
+      <defaultValue>'Alterando a Universidade'</defaultValue>
+      <description></description>
+      <id>971407ad-e96d-4b67-a8a0-b1f589c57c07</id>
+      <masked>false</masked>
+      <name>universidade</name>
+   </variable>
+   <variable>
+      <defaultValue>'Alterando a Profissao'</defaultValue>
+      <description></description>
+      <id>34534f59-9245-4827-b075-77cd7b242814</id>
+      <masked>false</masked>
+      <name>profissao</name>
+   </variable>
+   <variable>
+      <defaultValue>'Alterando o Genero'</defaultValue>
+      <description></description>
+      <id>051fd1eb-52b4-446f-b49a-0bf8fb037362</id>
+      <masked>false</masked>
+      <name>genero</name>
+   </variable>
+   <variable>
+      <defaultValue>'13'</defaultValue>
+      <description></description>
+      <id>e6745a7a-7d2a-4a2f-bf63-6c2ee71b58a9</id>
+      <masked>false</masked>
+      <name>idade</name>
+   </variable>
+</TestCaseEntity>
