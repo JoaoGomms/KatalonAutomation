@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>li_Name translation missing pt-BRactivereco_4aa27c</name>
+   <name>li_Email translation missing pt-BRactiverec_a96981</name>
    <tag></tag>
-   <elementGuidId>07561f3f-55a7-4e52-bfe7-84b20a47415f</elementGuidId>
+   <elementGuidId>20e1346b-68d2-4814-959c-083b5e2ed068</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank</value>
+      <value>Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -73,7 +73,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank']/parent::*</value>
+      <value>//*/text()[normalize-space(.)='Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>

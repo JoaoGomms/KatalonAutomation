@@ -6,12 +6,12 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TesteNome'</initValue>
+      <initValue>'Teste Nome'</initValue>
       <name>nome</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TesteSobrenome'</initValue>
+      <initValue>'Teste Sobrenome'</initValue>
       <name>sobrenome</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

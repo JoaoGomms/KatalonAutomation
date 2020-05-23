@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Email mal formatado e Faltando o nome</name>
+   <name>Exceção</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>482c472a-472c-478e-96e3-e2eadc7a0433</testCaseGuid>
+   <testCaseGuid>fbba6691-384c-4c33-9b97-23c563db1d76</testCaseGuid>
 </TestCaseEntity>

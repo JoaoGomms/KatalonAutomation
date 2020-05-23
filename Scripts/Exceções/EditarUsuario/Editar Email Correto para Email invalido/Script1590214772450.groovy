@@ -4,7 +4,6 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
-import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
@@ -18,27 +17,30 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Básico/Criar usuario'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://automacaocombatista.herokuapp.com/users/new')
+WebUI.click(findTestObject('PaginaDetalhesUsuário/a_Editar'))
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), nome)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), sobrenome)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), 'AlterandoParaEmailInvalido@gmail')
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), endereco)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), universidade)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), profissao)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), genero)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), idade)
 
 WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
 
-CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'(gravacao, 'UsuarioCriado', 'FluxoBasico')
+String text = WebUI.getText(findTestObject('Excecoes/li_Email translation missing pt-BRactiverec_a96981'))
 
+WebUI.verifyMatch(text, 'Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid', false)
+
+CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaEditarUsuario', 'AlterarParaEmailInvalido', 'FluxoExcecao')

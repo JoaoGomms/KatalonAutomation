@@ -43,27 +43,49 @@ import cucumber.api.java.en.When
 
 
 
-class CreateUser {
-	
-	
-	@Given("Navegar ao site")
-	def nvegarAoSite(){
-		println ("\n TESTE navegar ao site")
-	}
-	
-	@When("Inserir os dados do usuario")
-	def inserirDados(){
-		println("\n Inserindo as credenciais de criar usuario")
-	}
-	
-	@And("Cliclar no botão Criar")
-	def botaoCriar(){
-		println("\n Clicando no botao")
+class CriarUsuario {
 
+	@Given("Naveguei ate o site")
+	def navegarAteOSite() {
+		WebUI.openBrowser('')
+
+		WebUI.navigateToUrl('http://automacaocombatista.herokuapp.com/users/new')
 	}
-	
-	@Then("Abra a pagina com as informações do usuario")
-	def paginaDetalhes(){
-		println("\n Estou nos detalhes")
+
+
+
+	@When("Dados do usuario forem inseridos")
+	def inserirDadosUsuario() {
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
+
+		WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
+	}
+
+
+
+
+	@And("Clicar no botão Criar")
+	def criarUsuario() {
+		WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
+	}
+
+
+	@Then("Tire o print e feche o navegador")
+	def takeScreenshotAndClose() {
+		CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaCriarUsuario', 'UsuarioCriado', 'FluxoBasico')
+
+		WebUI.closeBrowser()
 	}
 }

@@ -17,29 +17,30 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Básico/Criar usuario'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://automacaocombatista.herokuapp.com/users/new')
+WebUI.click(findTestObject('PaginaDetalhesUsuário/a_Editar'))
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), '')
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), sobrenome)
 
 WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Email _useremail'), GlobalVariable.email)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), GlobalVariable.endereco)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Endereo_useraddress'), endereco)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), GlobalVariable.universidade)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Universidade_useruniversity'), universidade)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), GlobalVariable.profissao)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Profisso_userprofile'), profissao)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), GlobalVariable.genero)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender'), genero)
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
-
-def text = WebUI.getText(findTestObject('Exceções/li_Name translation missing pt-BRactivereco_4aa27c'))
-
-WebUI.verifyMatch(text, 'Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid', true)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), idade)
 
 WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
 
+String text = WebUI.getText(findTestObject('Excecoes/li_Name translation missing pt-BRactivereco_4aa27c'))
+
+WebUI.verifyEqual(text, 'Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank')
+
+CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaEditarUsuario', 'AlterarParaNomeEmBranco', 'FluxoExcecao')

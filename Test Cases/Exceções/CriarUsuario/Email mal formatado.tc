@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Email Mal Formatado</name>
+   <name>Email mal formatado</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>4e32b226-19c9-42f5-bb3c-7f4af3470f5b</testCaseGuid>
+   <testCaseGuid>dbf39c6a-7d80-4341-bdc9-6e4a2527d84f</testCaseGuid>
 </TestCaseEntity>

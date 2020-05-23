@@ -11,7 +11,6 @@ import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
-import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
@@ -22,7 +21,7 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://automacaocombatista.herokuapp.com/users/new')
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), '')
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
 
 WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
 
@@ -40,16 +39,11 @@ WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), G
 
 WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
 
-def textEmail = WebUI.getText(findTestObject('Exceções/li_Name translation missing pt-BRactivereco_4aa27c'))
+def text = WebUI.getText(findTestObject('Excecoes/li_Email translation missing pt-BRactiverec_a96981'))
 
-def textName = WebUI.getText(findTestObject('Exceções/li_Email translation missing pt-BRactiverec_a96981'))
+WebUI.verifyMatch(text, 'Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid', true)
 
+CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaCriarUsuario', 'EmailMalFormatado', 'FluxoExcecao')
 
-if(textEmail == 'Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid'){
-	return KeywordUtil.markPassed("O erro de email invalido foi recebido ")
-} else if(textName == 'Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank'){
-	return KeywordUtil.markPassed("O erro de nome em branco foi recebido ")
+WebUI.closeBrowser()
 
-} else{
-return KeywordUtil.markFailed("Os erros esperados não foram alertados")
-}
