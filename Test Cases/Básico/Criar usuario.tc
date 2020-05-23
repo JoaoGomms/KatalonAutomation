@@ -5,4 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>3c9559b4-acf3-4631-8d04-5ad06c0fa150</testCaseGuid>
+   <variable>
+      <defaultValue>'PaginaCriarUsuario'</defaultValue>
+      <description></description>
+      <id>085541f9-72c2-40c2-a2ab-a72945c7aaf6</id>
+      <masked>false</masked>
+      <name>gravacao</name>
+   </variable>
 </TestCaseEntity>

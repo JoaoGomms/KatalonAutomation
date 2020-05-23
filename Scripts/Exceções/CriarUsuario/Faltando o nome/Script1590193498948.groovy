@@ -17,13 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-import internal.GlobalVariable as GlobalVariable
-
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://automacaocombatista.herokuapp.com/users/new')
 
-WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), GlobalVariable.nome)
+WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Nome _username'), '')
 
 WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_ltimo nome _userlastname'), GlobalVariable.sobrenome)
 
@@ -39,11 +37,10 @@ WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Gnero_usergender')
 
 WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), GlobalVariable.idade)
 
-
-def text = WebUI.getText(findTestObject('Exceções/li_Email translation missing pt-BRactiverec_a96981'))
-
-WebUI.verifyMatch(text, 'Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank', true)
-
-
 WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
 
+String text = WebUI.getText(findTestObject('Excecoes/li_Name translation missing pt-BRactivereco_4aa27c'))
+
+WebUI.verifyEqual(text, 'Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank')
+
+CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaCriarUsuario', 'NomeEmBranco', 'FluxoExcecao')

@@ -4,6 +4,7 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
@@ -17,7 +18,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Básico/Criar usuario'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Básico/Criar usuario'), [('gravacao') : 'PaginaEditarUsuario'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('PaginaDetalhesUsuário/a_Editar'))
 
@@ -39,5 +40,5 @@ WebUI.setText(findTestObject('PaginaInserirDadosUsuario/input_Idade_userage'), i
 
 WebUI.click(findTestObject('PaginaInserirDadosUsuario/input_Idade_commit'))
 
-WebUI.closeBrowser()
+CustomKeywords.'cabal.utils.TakeScreenshotLocal.takeScreenshot'('PaginaEditarUsuario', 'UsuarioEditado', 'FluxoBasico')
 
